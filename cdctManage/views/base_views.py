@@ -7,9 +7,11 @@ from ..models import Lecture
 
 
 # Create your views here.
-
+import logging
+logger = logging.getLogger('cdctManage')
 
 def index(request):
+    logger.info("INFO LEVEL")
     #cdctManage list
     # 입력 파라미터
     page = request.GET.get('page', '1')  # 페이지
